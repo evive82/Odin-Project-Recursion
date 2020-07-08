@@ -9,11 +9,11 @@ def merge_sort(arr)
 end
 
 def merge(arr1, arr2, merged = [])
-  if arr1.length == 0 && arr2.length == 0
+  if arr1.empty? && arr2.empty?
     return merged
   else
-    if arr2.length == 0 ||
-       arr1.length > 0 && arr2.length > 0 && arr1[0] < arr2[0]
+    if arr2.empty? ||
+       !arr1.empty? && !arr2.empty? && arr1[0] < arr2[0]
       merged << arr1.shift
     else
       merged << arr2.shift
